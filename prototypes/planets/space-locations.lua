@@ -19,7 +19,7 @@ data:extend({
         draw_orbit = false,
         --asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.aq, 0.9)
     },
-    ---@type SpaceLocationPrototype
+    ---@type data.SpaceLocationPrototype
     {
         type = "space-location",
         name = "black-hole-approach",
