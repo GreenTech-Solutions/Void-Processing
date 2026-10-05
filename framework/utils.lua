@@ -47,14 +47,14 @@ end
 ---To get icons in nested directories, add a `/`, ex: "fluid/water"
 ---@param name string
 ---@return string
-utils.icon = function(name) return ('__VoidProcessing__/graphics/icons/%s.png'):format(name) end
+utils.icon = function(name) return ('__VoidProcessing-Updated__/graphics/icons/%s.png'):format(name) end
 
 ---Return the path to a specific technology icon in `mod_root/graphics/technology`
 ---
 ---To get icons in nested directories, add a `/`, ex: "fluid/water"
 ---@param name string
 ---@return string
-utils.technology_icon = function(name) return ('__VoidProcessing__/graphics/technology/%s.png'):format(name) end
+utils.technology_icon = function(name) return ('__VoidProcessing-Updated__/graphics/technology/%s.png'):format(name) end
 
 ---Add a recipe category to an `assembling-machine` recipe
 ---@param base_entity string

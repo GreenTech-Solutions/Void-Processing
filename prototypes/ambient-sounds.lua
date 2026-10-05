@@ -5,7 +5,7 @@ if not settings.startup["disable-new-music"].value then
             type = "ambient-sound",
             name = "void-processing-1",
             track_type = "main-track",
-            sound = "__VoidProcessing__/sounds/ambient/Density.ogg",
+            sound = "__VoidProcessing-Updated__/sounds/ambient/Density.ogg",
             weight = 10
         },
         

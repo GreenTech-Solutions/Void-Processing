@@ -167,7 +167,7 @@ data:extend({
                         stripes = {
                             {
                                 filename =
-                                "__VoidProcessing__/graphics/entity/void-pylon.png",
+                                "__VoidProcessing-Updated__/graphics/entity/void-pylon.png",
                                 width_in_frames = 8,
                                 height_in_frames = 8,
                             }
@@ -188,7 +188,7 @@ data:extend({
                         stripes = {
                             {
                                 filename =
-                                "__VoidProcessing__/graphics/entity/void-pylon.png",
+                                "__VoidProcessing-Updated__/graphics/entity/void-pylon.png",
                                 width_in_frames = 8,
                                 height_in_frames = 8,
                             }
@@ -242,7 +242,7 @@ data:extend({
                         stripes = {
                             {
                                 filename =
-                                "__VoidProcessing__/graphics/entity/void-pylon.png",
+                                "__VoidProcessing-Updated__/graphics/entity/void-pylon.png",
                                 width_in_frames = 8,
                                 height_in_frames = 8,
                             }
@@ -263,7 +263,7 @@ data:extend({
                         stripes = {
                             {
                                 filename =
-                                "__VoidProcessing__/graphics/entity/void-pylon.png",
+                                "__VoidProcessing-Updated__/graphics/entity/void-pylon.png",
                                 width_in_frames = 8,
                                 height_in_frames = 8,
                             }
