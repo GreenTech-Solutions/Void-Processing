@@ -20,7 +20,7 @@ trap 'rm -rf "$tmp"' EXIT
 lua_home="$root/5.2"
 if [ ! -x "$lua_home/bin/lua" ]; then
   curl -sfL "https://raw.githubusercontent.com/luarocks/hererocks/$hererocks_commit/hererocks.py" -o "$tmp/hererocks.py"
-  python3 "$tmp/hererocks.py" "$lua_home" -l 5.2 -r latest
+  python3 "$tmp/hererocks.py" "$lua_home" -l 5.2 -r latest --no-readline
 fi
 "$lua_home/bin/lua" -v
 
