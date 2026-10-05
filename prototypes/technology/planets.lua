@@ -20,7 +20,8 @@ data:extend({
                 space_location = "black-hole",
                 use_icon_overlay_constant = true
             },
-            lib.technology.unlock_recipe("void-pylon-tuned")
+            lib.technology.unlock_recipe("void-pylon-tuned"),
+            lib.technology.unlock_recipe("void-data-disk-black-hole")
         },
         prerequisites = { "void-pylon" },
         unit = lib.technology.cost(2500, lib.globals.technology.require_all_promethium, 60),
