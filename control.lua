@@ -1,77 +1,58 @@
-local lib = require("lib")
+-- The tuned void pylon only works while its space platform is stopped at Oratl (space location "black-hole").
+-- There is no event for a recipe change, so the pylon is a separate entity that the script turns off and on:
+-- when a platform changes state, when a pylon is built, and once for every surface when the mod set changes.
 
--- Missing "on_recipe-change"
--- ---Initialize the controls for a recipe that can only be crafted at a specific space location
--- ---@param recipe string
--- ---@param space_location_name string
--- function add_recipe_at_location_handler(recipe, space_location_name)
---     script.on_event(defines.events.on_space_platform_changed_state, function(event)
---         enable_recipe_at_location(event.platform, recipe, space_location_name)
---     end)
--- end
+local pylon_name = "void-pylon-tuned"
+local location_name = "black-hole"
 
--- ---Only enable a recipe if a space platform is at a specific space location
--- ---@param platform LuaSpacePlatform
--- ---@param recipe string
--- ---@param space_location_name string
--- function enable_recipe_at_location(platform, recipe, space_location_name)
---     local disable = platform.space_location == nil or platform.space_location.name ~= space_location_name
---     toggle_recipe_on_surface(platform.surface, recipe, disable)
--- end
-
--- ---Enable or disable a recipe on a whole surface
--- ---@param surface LuaSurface
--- ---@param recipe string
--- ---@param disable boolean
--- function toggle_recipe_on_surface(surface, recipe, disable)
---     local entities = surface.find_entities_filtered({ type = { "assembling-machine", "furnace", "rocket-silo" } })
-
---     for _, entity in pairs(entities) do
---         local ent_recipe = entity.get_recipe()
---         if ent_recipe ~= nil and ent_recipe.name == recipe then
---             entity.disabled_by_script = disable
---         end
---     end
--- end
-
--- add_recipe_at_location_handler("void-data-disk-black-hole", "black-hole")
-
-
----Initialize the controls for an entity that can only work at a specific space location
----@param entity string
----@param space_location_name string
-function add_entity_at_location_handler(entity, space_location_name)
-    script.on_event(defines.events.on_space_platform_changed_state, function(event)
-        enable_entity_at_location(event.platform, entity, space_location_name)
-    end)
-end
-
----Only enable a recipe if a space platform is at a specific space location
----@param platform LuaSpacePlatform
----@param entity_name string
----@param space_location_name string
-function enable_entity_at_location(platform, entity_name, space_location_name)
-    -- The plateform may no have a surface on creation
-    if platform.surface == nil then
-        return
-    end
-
-    local disable = platform.space_location == nil or platform.space_location.name ~= space_location_name
-    toggle_entity_on_surface(platform.surface, entity_name, disable)
-end
-
----Enable or disable a recipe on a whole surface
 ---@param surface LuaSurface
----@param entity_name string
----@param disable boolean
-function toggle_entity_on_surface(surface, entity_name, disable)
-    local entities = surface.find_entities_filtered({ type = { "assembling-machine", "furnace", "rocket-silo" } })
+---@return boolean
+local function works_on(surface)
+    local platform = surface.platform
+    return platform ~= nil and platform.space_location ~= nil and platform.space_location.name == location_name
+end
 
-    for _, entity in pairs(entities) do
-        if entity.name == entity_name then
-            entity.disabled_by_script = disable
-        end
+---@param surface LuaSurface
+local function update_surface(surface)
+    local disable = not works_on(surface)
+    for _, entity in pairs(surface.find_entities_filtered({ name = pylon_name })) do
+        entity.disabled_by_script = disable
     end
 end
 
-add_entity_at_location_handler("void-pylon-tuned", "black-hole")
+local function update_all_surfaces()
+    for _, surface in pairs(game.surfaces) do
+        update_surface(surface)
+    end
+end
+
+script.on_init(update_all_surfaces)
+script.on_configuration_changed(update_all_surfaces)
+
+script.on_event(defines.events.on_space_platform_changed_state, function(event)
+    -- A platform has no surface right after it is created
+    local surface = event.platform.surface
+    if surface then
+        update_surface(surface)
+    end
+end)
+
+---@param entity LuaEntity?
+local function update_built(entity)
+    if entity and entity.valid then
+        entity.disabled_by_script = not works_on(entity.surface)
+    end
+end
+
+---@param event EventData.on_built_entity|EventData.on_robot_built_entity|EventData.on_space_platform_built_entity|EventData.script_raised_built|EventData.script_raised_revive
+local function on_built(event)
+    update_built(event.entity)
+end
+
+local built_filter = { { filter = "name", name = pylon_name } }
+script.on_event(defines.events.on_built_entity, on_built, built_filter)
+script.on_event(defines.events.on_robot_built_entity, on_built, built_filter)
+script.on_event(defines.events.on_space_platform_built_entity, on_built, built_filter)
+script.on_event(defines.events.script_raised_built, on_built, built_filter)
+script.on_event(defines.events.script_raised_revive, on_built, built_filter)
+script.on_event(defines.events.on_entity_cloned, function(event) update_built(event.destination) end, built_filter)
