@@ -8,7 +8,7 @@ data:extend({
         energy_required = 30,
         icon = lib.icon("void-data-disk"),
         allow_productivity = true,
-        enabled = true,
+        enabled = false,
         ingredients = {
             { type = "item",  name = "steel-plate",            amount = 1 },
             { type = "item",  name = "void-control-unit",      amount = 1 },
@@ -37,7 +37,7 @@ data:extend({
         },
         surface_condition = lib.globals.surface_conditions.space,
         allow_productivity = false,
-        enabled = true,
+        enabled = false,
         ingredients = {
             { type = "item", name = "void-data-disk", amount = 1 },
         },
@@ -46,25 +46,3 @@ data:extend({
         }
     },
 })
-
-function add_void_learning_recipe(name)
-    data:extend({
-        {
-            type = "recipe",
-            name = "void-data-disk-" .. name,
-            categories = { "void-condensing" },
-            energy_required = 90,
-            icon = lib.icon("test"),
-            allow_productivity = false,
-            enabled = true,
-            ingredients = {
-                { type = "item",  name = "void-data-disk",         amount = 1 },
-                { type = "item",  name = name,                     amount = 20 },
-                { type = "fluid", name = "semi-destabilized-void", amount = 100 },
-            },
-            results = {
-                { type = "item", name = "void-data-disk-" + name, amount = 1 },
-            }
-        },
-    })
-end
