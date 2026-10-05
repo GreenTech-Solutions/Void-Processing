@@ -20,9 +20,8 @@ if [ ! -x "$bin/luac" ] || [ ! -x "$bin/luacheck" ] || [ ! -x "$emmylua" ] || [ 
   exit 1
 fi
 
-# Upstream findings fixed in 2.1.1: data-final-fixes.lua reads promethium-science-pack's unit without a nil check,
-# prototypes/items/entities.lua sets weight twice. Remove together with those fixes.
-known_diagnostics=(need-check-nil duplicate-index)
+# Upstream finding fixed in 2.1.1: prototypes/items/entities.lua sets weight twice. Remove together with that fix.
+known_diagnostics=(duplicate-index)
 
 cd "$repo"
 status=0
