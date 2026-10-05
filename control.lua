@@ -38,7 +38,7 @@ local lib = require("lib")
 
 
 ---Initialize the controls for an entity that can only work at a specific space location
----@param entity_name string
+---@param entity string
 ---@param space_location_name string
 function add_entity_at_location_handler(entity, space_location_name)
     script.on_event(defines.events.on_space_platform_changed_state, function(event)

@@ -12,8 +12,8 @@ local technology_base = {
 local technology_add = {}
 
 ---Create the technology science cost. Set this as the "unit" field
----@param count number
----@param ingredients ResearchIngredient[]
+---@param count uint64
+---@param ingredients data.ResearchIngredient[]
 ---@param time number
 ---@return data.TechnologyUnit
 technology.cost = function(count, ingredients, time)
