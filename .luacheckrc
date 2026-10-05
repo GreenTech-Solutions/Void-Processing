@@ -19,9 +19,3 @@ read_globals = {
 -- data-stage code writes into data.raw
 globals = { "data", "storage" }
 
--- Upstream findings fixed in 2.1.1, remove together with those fixes:
--- unused locals, functions and globals, weight set twice in items/entities.lua, lib.old.lua (dead, uses get_ordering from
--- scripts/ordering.lua) and whitespace
-ignore = { "131", "211", "212", "213", "311", "314", "611", "612" }
-files["lib.old.lua"] = { ignore = { "113" } }
-files["scripts/ordering.lua"] = { globals = { "char", "get_ordering" } }

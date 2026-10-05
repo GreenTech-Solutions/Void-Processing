@@ -1,5 +1,4 @@
 local lib = require("lib")
-local base_item_sounds = require("__base__.prototypes.item_sounds")
 
 data:extend({
     {
@@ -10,7 +9,6 @@ data:extend({
         subgroup = "production-machine",
         order = "g",
         default_import_location = "nauvis",
-        weight = 10 * 1000,
         stack_size = 20,
         place_result = "void-assembler",
         weight = lib.utils.rocket_stack_size(20)
@@ -24,7 +22,6 @@ data:extend({
         subgroup = "production-machine",
         order = "h",
         default_import_location = "nauvis",
-        weight = 10 * 1000,
         stack_size = 20,
         place_result = "void-pylon",
         weight = lib.utils.rocket_stack_size(20)
@@ -37,7 +34,6 @@ data:extend({
         subgroup = "production-machine",
         order = "i",
         default_import_location = "nauvis",
-        weight = 10 * 1000,
         stack_size = 20,
         place_result = "void-pylon-tuned",
         weight = lib.utils.rocket_stack_size(20)
