@@ -20,9 +20,6 @@ if [ ! -x "$bin/luac" ] || [ ! -x "$bin/luacheck" ] || [ ! -x "$emmylua" ] || [ 
   exit 1
 fi
 
-# Upstream finding fixed in 2.1.1: prototypes/items/entities.lua sets weight twice. Remove together with that fix.
-known_diagnostics=(duplicate-index)
-
 cd "$repo"
 status=0
 
@@ -41,11 +38,10 @@ echo "luacheck: done"
 
 config=$(mktemp)
 trap 'rm -f "$config" "$config.out"' EXIT
-python3 - .emmyrc.json "$library" "$config" "${known_diagnostics[@]}" <<'PY'
+python3 - .emmyrc.json "$library" "$config" <<'PY'
 import json, sys
 config = json.load(open(sys.argv[1]))
 config.setdefault("workspace", {})["library"] = [sys.argv[2]]
-config.setdefault("diagnostics", {}).setdefault("disable", []).extend(sys.argv[4:])
 json.dump(config, open(sys.argv[3], "w"))
 PY
 "$emmylua" . -c "$config" --warnings-as-errors > "$config.out" 2>&1 || status=1

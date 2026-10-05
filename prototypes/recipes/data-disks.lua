@@ -46,25 +46,3 @@ data:extend({
         }
     },
 })
-
-function add_void_learning_recipe(name)
-    data:extend({
-        {
-            type = "recipe",
-            name = "void-data-disk-" .. name,
-            categories = { "void-condensing" },
-            energy_required = 90,
-            icon = lib.icon("test"),
-            allow_productivity = false,
-            enabled = true,
-            ingredients = {
-                { type = "item",  name = "void-data-disk",         amount = 1 },
-                { type = "item",  name = name,                     amount = 20 },
-                { type = "fluid", name = "semi-destabilized-void", amount = 100 },
-            },
-            results = {
-                { type = "item", name = "void-data-disk-" + name, amount = 1 },
-            }
-        },
-    })
-end

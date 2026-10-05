@@ -8,6 +8,6 @@ if not settings.startup["disable-new-music"].value then
             sound = "__VoidProcessing__/sounds/ambient/Density.ogg",
             weight = 10
         },
-        
+
     })
 end

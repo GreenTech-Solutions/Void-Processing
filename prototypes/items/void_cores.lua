@@ -1,5 +1,4 @@
 local lib = require("lib")
-local base_item_sounds = require("__base__.prototypes.item_sounds")
 
 local base_core = {
     type = "item",
