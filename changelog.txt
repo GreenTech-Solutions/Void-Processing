@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.1
+Date: 2026-10-05
+  Compatibility:
+    - Redrawn Space Connections keeps Oratl reachable only through its approach
+  Bugfixes:
+    - Crash on load when another mod turns the promethium science pack technology into a research trigger
+    - Tuned void pylons built away from Oratl no longer work until their platform reaches Oratl
+    - Void data disk recipes are no longer available from the start; Black hole discovery unlocks the black hole data disk
+  Locale:
+    - Oratl is spelled Оратль in Russian
+    - Oratl was still spelled Oralt in the discovery technology, the data extraction recipe and the tuned pylon description
+---------------------------------------------------------------------------------------------------
 Version: 2.1.0
 Date: 2026-10-05
   Info:
