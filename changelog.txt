@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.0
+Date: 2026-10-05
+  Info:
+    - Prototype and setting names are unchanged, so a save with VoidProcessing can switch to this mod
+    - Published as VoidProcessing-Updated, a fork of VoidProcessing 2.0.3 by RustyNova
+  Features:
+    - Support Factorio 2.1
+---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 2025-06-03
   Bugfixes:
