@@ -1,0 +1,19 @@
+{
+  "name": "void-processing-release",
+  "private": true,
+  "description": "Release and check tooling for the VoidProcessing-Updated Factorio mod: semantic-release with semantic-release-factorio, and fmtk for the Factorio API library used by tools/check.sh",
+  "packageManager": "pnpm@12.9.1",
+  "engines": {
+    "node": ">=24.10.0"
+  },
+  "devDependencies": {
+    "@semantic-release/commit-analyzer": "13.0.1",
+    "@semantic-release/git": "11.0.1",
+    "@semantic-release/github": "12.0.10",
+    "@semantic-release/release-notes-generator": "14.1.1",
+    "conventional-changelog-conventionalcommits": "10.4.0",
+    "factoriomod-debug": "2.1.9",
+    "semantic-release": "25.0.9",
+    "semantic-release-factorio": "1.8.0"
+  }
+}
