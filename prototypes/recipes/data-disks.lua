@@ -8,7 +8,7 @@ data:extend({
         energy_required = 30,
         icon = lib.icon("void-data-disk"),
         allow_productivity = true,
-        enabled = true,
+        enabled = false,
         ingredients = {
             { type = "item",  name = "steel-plate",            amount = 1 },
             { type = "item",  name = "void-control-unit",      amount = 1 },
@@ -37,7 +37,7 @@ data:extend({
         },
         surface_condition = lib.globals.surface_conditions.space,
         allow_productivity = false,
-        enabled = true,
+        enabled = false,
         ingredients = {
             { type = "item", name = "void-data-disk", amount = 1 },
         },
