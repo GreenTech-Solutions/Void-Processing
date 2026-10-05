@@ -8,13 +8,12 @@ data:extend({
     {
         type = "recipe",
         name = "iron-bacteria-infusing",
-        category = "organic",
+        categories = { "organic" },
         energy_required = 10,
         icon = lib.icon("iron-bacteria-infusing"),
         subgroup = "intermediaries",
         order = "a-b",
         allow_productivity = true,
-        result_is_always_fresh = true,
         enabled = false,
         ingredients = {
             { type = "item",  name = "nutrients",              amount = 5 },
@@ -22,7 +21,7 @@ data:extend({
             { type = "fluid", name = "semi-destabilized-void", amount = 20 }
         },
         results = {
-            { type = "item", name = "void-bacteria", amount = 1, }
+            { type = "item", name = "void-bacteria", amount = 1, always_fresh = true }
         },
         crafting_machine_tint =
         {
@@ -35,13 +34,12 @@ data:extend({
     {
         type = "recipe",
         name = "copper-bacteria-infusing",
-        category = "organic",
+        categories = { "organic" },
         energy_required = 10,
         icon = lib.icon("copper-bacteria-infusing"),
         subgroup = "intermediaries",
         order = "a-c",
         allow_productivity = true,
-        result_is_always_fresh = true,
         enabled = false,
         ingredients = {
             { type = "item",  name = "nutrients",              amount = 5 },
@@ -49,7 +47,7 @@ data:extend({
             { type = "fluid", name = "semi-destabilized-void", amount = 20 }
         },
         results = {
-            { type = "item", name = "void-bacteria", amount = 1, }
+            { type = "item", name = "void-bacteria", amount = 1, always_fresh = true }
         },
         crafting_machine_tint =
         {
@@ -62,7 +60,7 @@ data:extend({
     {
         type = "recipe",
         name = "lithium-holmium-alloy",
-        category = "metallurgy",
+        categories = { "metallurgy" },
         energy_required = 10,
         subgroup = "intermediaries",
         order = "b-a",
@@ -97,7 +95,7 @@ data:extend({
     {
         type = "recipe",
         name = "crystalization-plating",
-        category = "cryogenics",
+        categories = { "cryogenics" },
         energy_required = 10,
         icon = lib.icon("crystalization-plating"),
         subgroup = "intermediaries",
@@ -117,7 +115,7 @@ data:extend({
     {
         type = "recipe",
         name = "lukewarm-fluoroketone-cooling",
-        category = "cryogenics",
+        categories = { "cryogenics" },
         energy_required = 10,
         icon = lib.icon("fluid/fluoroketone-cooling"),
         subgroup = "intermediaries",
@@ -134,7 +132,7 @@ data:extend({
     {
         type = "recipe",
         name = "void-control-unit",
-        category = "void-crafting-or-fluid-crafting",
+        categories = { "void-crafting-or-fluid-crafting" },
         energy_required = 30,
         icon = lib.icon("void-control-unit"),
         subgroup = "intermediaries",

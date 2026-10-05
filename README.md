@@ -1,4 +1,7 @@
 # Void-Processing
+
+> Fork of [RustyNova016/Void-Processing](https://github.com/RustyNova016/Void-Processing) updated for Factorio 2.1, published as `VoidProcessing-Updated`. All credit for the mod goes to RustyNova.
+
 A space age extension mod, right after promethium science. This adds a whole new tier of science, focused on matter/reality manipulation.
 
 This feature late game challenges where your interplanetary logistics skills will be tested, featuring challenges from all planets, as well as new space location for you to discover
@@ -28,9 +31,9 @@ Currently, 2 out of 3 parts are done. There is still the quality cycling left to
 
 Since there is no special license to keep assets in the factorio community, this mod got a special type of licensing.
 
-The code is licensed under [MIT](https://choosealicense.com/licenses/mit/).
+The code is licensed under [MIT](./LICENSE).
 
-Graphics and sounds are distributed under [GPLv3](https://choosealicense.com/licenses/gpl-3.0/), with some key points
+Graphics and sounds are distributed under [GPLv3](./LICENSE-ASSETS), with some key points
 - Edited assets from factorio keep the Factorio's asset policy. This means that you can only reuse them for factorio mods
 - If you use / edit my assets in a factorio mod, only those assets are affected by GPLv3. Not the other assets used
 - Any assets not made for this mod (E.G. The void assembler) must respect the original author's policy

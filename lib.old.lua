@@ -38,8 +38,8 @@ Public.find = function(tbl, f, ...)
 	return nil
 end
 
-Public.icon = function(name) return ('__VoidProcessing__/graphics/icons/%s.png'):format(name) end
-Public.icon_fluid = function(name) return ('__VoidProcessing__/graphics/icons/fluid/%s.png'):format(name) end
+Public.icon = function(name) return ('__VoidProcessing-Updated__/graphics/icons/%s.png'):format(name) end
+Public.icon_fluid = function(name) return ('__VoidProcessing-Updated__/graphics/icons/fluid/%s.png'):format(name) end
 
 Public.add_recipe_category = function(base_entity, new_categories)
 	data.raw["assembling-machine"][base_entity].crafting_categories = Public.merge(

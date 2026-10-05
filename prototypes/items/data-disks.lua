@@ -38,7 +38,7 @@ function add_data_disk(data_name, order, icon)
                 {
                     icon = icon,
                     icon_size = 64,
-                    scale = (0.5 * defines.default_icon_size / 64) * 0.5,
+                    scale = (0.5 * defines.constant.default_icon_size / 64) * 0.5,
                     shift = { 4, -4 }
                 },
 

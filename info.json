@@ -1,16 +1,18 @@
 {
-  "name": "VoidProcessing",
+  "name": "VoidProcessing-Updated",
   "version": "2.0.3",
-  "title": "Void Processing",
-  "author": "RustyNova",
-  "description": "Unleash the power of the void!",
-  "factorio_version": "2.0",
+  "title": "Void Processing (2.1)",
+  "author": "RustyNova, updated by Alex Green",
+  "homepage": "https://github.com/GreenTech-Solutions/Void-Processing",
+  "description": "Unleash the power of the void!\nVoid Processing by RustyNova, updated for Factorio 2.1. Prototype names are unchanged, so a save with the original mod can switch to this one.",
+  "factorio_version": "2.1",
   "dependencies": [
-    "base >= 2.0.29",
-    "space-age >= 2.0.29",
-    "finely-crafted-graphics >= 1.1.0",
-    "? visible-planets >= 1.2.11",
-    "PlanetsLib >= 1.4.1"
+    "base >= 2.1.0",
+    "space-age >= 2.1.0",
+    "finely-crafted-graphics >= 2.1.0",
+    "? visible-planets >= 1.8.0",
+    "PlanetsLib >= 2.0.8",
+    "! VoidProcessing"
   ],
   "quality_required": false,
   "rail_bridges_required": false,

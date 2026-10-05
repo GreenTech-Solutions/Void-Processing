@@ -1,7 +1,6 @@
 local lib = require("lib")
 
----@diagnostic disable-next-line: undefined-global
-local pipe_pic = assembler3pipepictures()
+local pipe_pic = require("__base__.prototypes.entity.assembler-pictures").assembler3pipepictures
 ---@diagnostic disable-next-line: undefined-global
 local pipecoverpic = pipecoverspictures()
 
@@ -167,7 +166,7 @@ data:extend({
                         stripes = {
                             {
                                 filename =
-                                "__VoidProcessing__/graphics/entity/void-pylon.png",
+                                "__VoidProcessing-Updated__/graphics/entity/void-pylon.png",
                                 width_in_frames = 8,
                                 height_in_frames = 8,
                             }
@@ -188,7 +187,7 @@ data:extend({
                         stripes = {
                             {
                                 filename =
-                                "__VoidProcessing__/graphics/entity/void-pylon.png",
+                                "__VoidProcessing-Updated__/graphics/entity/void-pylon.png",
                                 width_in_frames = 8,
                                 height_in_frames = 8,
                             }
@@ -242,7 +241,7 @@ data:extend({
                         stripes = {
                             {
                                 filename =
-                                "__VoidProcessing__/graphics/entity/void-pylon.png",
+                                "__VoidProcessing-Updated__/graphics/entity/void-pylon.png",
                                 width_in_frames = 8,
                                 height_in_frames = 8,
                             }
@@ -263,7 +262,7 @@ data:extend({
                         stripes = {
                             {
                                 filename =
-                                "__VoidProcessing__/graphics/entity/void-pylon.png",
+                                "__VoidProcessing-Updated__/graphics/entity/void-pylon.png",
                                 width_in_frames = 8,
                                 height_in_frames = 8,
                             }
