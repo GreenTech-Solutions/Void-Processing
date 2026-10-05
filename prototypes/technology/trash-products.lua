@@ -27,15 +27,15 @@ data:extend({
         name = "waste-processing-1",
         icons = {
             {
-                icon = "__quality__/graphics/icons/recycling.png"
+                icon = "__recycler__/graphics/icons/recycling.png"
             },
             {
                 icon = lib.icon("void-promethium"),
                 icon_size = 64,
-                scale = (0.5 * defines.default_icon_size / 64) * 0.8 * 4,
+                scale = (0.5 * defines.constant.default_icon_size / 64) * 0.8 * 4,
             },
             {
-                icon = "__quality__/graphics/icons/recycling-top.png"
+                icon = "__recycler__/graphics/icons/recycling-top.png"
             },
         },
         essential = false,
@@ -48,15 +48,15 @@ data:extend({
         name = "waste-processing-2",
         icons = {
             {
-                icon = "__quality__/graphics/icons/recycling.png"
+                icon = "__recycler__/graphics/icons/recycling.png"
             },
             {
                 icon = lib.icon("fluid/void-crystal-slurry"),
                 icon_size = 64,
-                scale = (0.5 * defines.default_icon_size / 64) * 0.8 * 4,
+                scale = (0.5 * defines.constant.default_icon_size / 64) * 0.8 * 4,
             },
             {
-                icon = "__quality__/graphics/icons/recycling-top.png"
+                icon = "__recycler__/graphics/icons/recycling-top.png"
             },
         },
         essential = false,
@@ -69,15 +69,15 @@ data:extend({
         name = "waste-processing-3",
         icons = {
             {
-                icon = "__quality__/graphics/icons/recycling.png"
+                icon = "__recycler__/graphics/icons/recycling.png"
             },
             {
                 icon = lib.icon("void-core-fractured"),
                 icon_size = 64,
-                scale = (0.5 * defines.default_icon_size / 64) * 0.8 * 4,
+                scale = (0.5 * defines.constant.default_icon_size / 64) * 0.8 * 4,
             },
             {
-                icon = "__quality__/graphics/icons/recycling-top.png"
+                icon = "__recycler__/graphics/icons/recycling-top.png"
             },
         },
         essential = false,

@@ -1,7 +1,6 @@
 local lib = require("lib")
 
----@diagnostic disable-next-line: undefined-global
-local pipe_pic = assembler3pipepictures()
+local pipe_pic = require("__base__.prototypes.entity.assembler-pictures").assembler3pipepictures
 ---@diagnostic disable-next-line: undefined-global
 local pipecoverpic = pipecoverspictures()
 

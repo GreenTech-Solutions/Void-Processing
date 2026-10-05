@@ -4,7 +4,7 @@ data:extend({
     {
         type = "recipe",
         name = "petroleum-destabilizing",
-        category = "chemistry",
+        categories = { "chemistry" },
         energy_required = 20,
         enabled = false,
         icons = {
@@ -32,7 +32,7 @@ data:extend({
     {
         type = "recipe",
         name = "bioflux-destabilizing",
-        category = "organic",
+        categories = { "organic" },
         energy_required = 20,
         enabled = false,
         icons = {
@@ -57,9 +57,8 @@ data:extend({
         },
         results = {
             { type = "fluid", name = "semi-destabilized-void", amount = 250 },
-            { type = "item",  name = "void-bacteria",          amount = 1,  probability = 0.75, }
+            { type = "item",  name = "void-bacteria",          amount = 1,  independent_probability = 0.75, always_fresh = true }
         },
-        result_is_always_fresh = true,
         crafting_machine_tint =
         {
             primary = { r = 0.54, g = 0.12, b = 0.80, a = 1.000 },   -- #ff7400ff
@@ -70,7 +69,7 @@ data:extend({
     {
         type = "recipe",
         name = "rocket-fuel-destabilizing",
-        category = "chemistry",
+        categories = { "chemistry" },
         energy_required = 20,
         enabled = false,
         icons = {
@@ -98,7 +97,7 @@ data:extend({
     {
         type = "recipe",
         name = "unstable-void-matter-destabilizing",
-        category = "chemistry-or-cryogenics",
+        categories = { "chemistry", "cryogenics" },
         energy_required = 2,
         enabled = false,
         icons = {
@@ -133,7 +132,7 @@ data:extend({
     {
         type = "recipe",
         name = "thruster-fuel-destabilizing",
-        category = "void-crafting",
+        categories = { "void-crafting" },
         energy_required = 2,
         enabled = false,
         icons = {
