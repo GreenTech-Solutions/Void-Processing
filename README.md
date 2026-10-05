@@ -1,4 +1,7 @@
 # Void-Processing
+
+> Fork of [RustyNova016/Void-Processing](https://github.com/RustyNova016/Void-Processing) updated for Factorio 2.1, published as `VoidProcessing-Updated`. All credit for the mod goes to RustyNova.
+
 A space age extension mod, right after promethium science. This adds a whole new tier of science, focused on matter/reality manipulation.
 
 This feature late game challenges where your interplanetary logistics skills will be tested, featuring challenges from all planets, as well as new space location for you to discover
