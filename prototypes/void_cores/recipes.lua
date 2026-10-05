@@ -8,7 +8,7 @@ function add_charge_recipe(name, void_count)
             enabled = true,
             icon = lib.icon("test"),
             energy_required = 5, -- time to craft in seconds (at crafting speed 1)
-            category = "void-crafting",
+            categories = { "void-crafting" },
             ingredients = {
                 { type = "item",  name = ('%s-spent'):format(name), amount = 1 },
                 { type = "fluid", name = "semi-destabilized-void",  amount = void_count }
@@ -27,7 +27,7 @@ function add_discharge_recipe(name, void_count, degraded_name)
             enabled = true,
             icon = lib.icon("test"),
             energy_required = 5, -- time to craft in seconds (at crafting speed 1)
-            category = "void-crafting",
+            categories = { "void-crafting" },
             ingredients = {
                 { type = "item", name = name, amount = 1 },
             },
@@ -49,7 +49,7 @@ data:extend({
         name = "void-core-inert-rebuild",
         enabled = true,
         energy_required = 10, -- time to craft in seconds (at crafting speed 1)
-        category = "void-crafting",
+        categories = { "void-crafting" },
         ingredients = {
             { type = "item",  name = "void-core-inert",        amount = 1 },
             { type = "fluid", name = "semi-destabilized-void", amount = 200 }

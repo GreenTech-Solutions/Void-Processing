@@ -4,7 +4,7 @@ data:extend({
     {
         type = "recipe",
         name = "void-data-disk",
-        category = "void-crafting",
+        categories = { "void-crafting" },
         energy_required = 30,
         icon = lib.icon("void-data-disk"),
         allow_productivity = true,
@@ -21,7 +21,7 @@ data:extend({
     {
         type = "recipe",
         name = "void-data-disk-black-hole",
-        category = "black-hole-condensing",
+        categories = { "black-hole-condensing" },
         energy_required = 60,
         icons = {
             {
@@ -30,7 +30,7 @@ data:extend({
             {
                 icon = lib.icon("black-hole-icon"),
                 icon_size = 64,
-                scale = (0.5 * defines.default_icon_size / 64) * 0.5,
+                scale = (0.5 * defines.constant.default_icon_size / 64) * 0.5,
                 shift = { 4, -4 }
             },
 
@@ -52,7 +52,7 @@ function add_void_learning_recipe(name)
         {
             type = "recipe",
             name = "void-data-disk-" .. name,
-            category = "void-condensing",
+            categories = { "void-condensing" },
             energy_required = 90,
             icon = lib.icon("test"),
             allow_productivity = false,

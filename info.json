@@ -4,13 +4,13 @@
   "title": "Void Processing",
   "author": "RustyNova",
   "description": "Unleash the power of the void!",
-  "factorio_version": "2.0",
+  "factorio_version": "2.1",
   "dependencies": [
-    "base >= 2.0.29",
-    "space-age >= 2.0.29",
-    "finely-crafted-graphics >= 1.1.0",
-    "? visible-planets >= 1.2.11",
-    "PlanetsLib >= 1.4.1"
+    "base >= 2.1.0",
+    "space-age >= 2.1.0",
+    "finely-crafted-graphics >= 2.1.0",
+    "? visible-planets >= 1.8.0",
+    "PlanetsLib >= 2.0.8"
   ],
   "quality_required": false,
   "rail_bridges_required": false,

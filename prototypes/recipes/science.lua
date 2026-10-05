@@ -4,7 +4,7 @@ data:extend({
     {
         type = "recipe",
         name = "gibberish-data",
-        category = "void-crafting",
+        categories = { "void-crafting" },
         energy_required = 10,
         surface_condition = lib.globals.surface_conditions.space,
         allow_productivity = true,
@@ -16,7 +16,7 @@ data:extend({
             { type = "fluid", name = "semi-destabilized-void",    amount = 250 },
         },
         results = {
-            { type = "item", name = "gibberish-data-a", amount = 1, probability = 0.2 }, --todo: Set random at load time. For funsies :)
+            { type = "item", name = "gibberish-data-a", amount = 1, independent_probability = 0.2 }, --todo: Set random at load time. For funsies :)
             { type = "item", name = "void-data-disk",   amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
         },
         main_product = "gibberish-data-a"
@@ -25,7 +25,7 @@ data:extend({
     {
         type = "recipe",
         name = "gibberish-data-processing-1",
-        category = "void-crafting",
+        categories = { "void-crafting" },
         energy_required = 30,
         subgroup = "void-science",
         order = "a-b",
@@ -50,15 +50,15 @@ data:extend({
             { type = "item", name = "gibberish-data-c", amount = 1 }, --todo: Set random at load time. For funsies :)
         },
         results = {
-            { type = "item", name = "gibberish-data-f",     amount = 1, probability = 0.75 }, --todo: Set random at load time. For funsies :)
-            { type = "item", name = "unstable-void-matter", amount = 1, probability = 0.25 },
+            { type = "item", name = "gibberish-data-f",     amount = 1, independent_probability = 0.75 }, --todo: Set random at load time. For funsies :)
+            { type = "item", name = "unstable-void-matter", amount = 1, independent_probability = 0.25 },
         },
         main_product = "gibberish-data-f"
     },
     {
         type = "recipe",
         name = "gibberish-data-processing-2",
-        category = "void-crafting",
+        categories = { "void-crafting" },
         energy_required = 30,
         subgroup = "void-science",
         order = "a-c",
@@ -83,9 +83,9 @@ data:extend({
             { type = "item", name = "gibberish-data-e", amount = 1 }, --todo: Set random at load time. For funsies :)
         },
         results = {
-            { type = "item", name = "void-data",            amount = 1, probability = 0.75 }, --todo: Set random at load time. For funsies :)
-            { type = "item", name = "gibberish-data-b",     amount = 1, probability = 0.25 },
-            { type = "item", name = "unstable-void-matter", amount = 1, probability = 0.1 },
+            { type = "item", name = "void-data",            amount = 1, independent_probability = 0.75 }, --todo: Set random at load time. For funsies :)
+            { type = "item", name = "gibberish-data-b",     amount = 1, independent_probability = 0.25 },
+            { type = "item", name = "unstable-void-matter", amount = 1, independent_probability = 0.1 },
         },
         main_product = "void-data"
     },
@@ -93,7 +93,7 @@ data:extend({
     {
         type = "recipe",
         name = lib.prefix("void-science-pack"),
-        category = "void-crafting",
+        categories = { "void-crafting" },
         energy_required = 30,
         icon = lib.icon("void-science-pack"),
         surface_condition = lib.globals.surface_conditions.space,

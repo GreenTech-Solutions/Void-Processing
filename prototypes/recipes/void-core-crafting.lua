@@ -30,17 +30,16 @@ data:extend({
             { type = "item",  name = "void-bacteria",          amount = 2 },
             { type = "fluid", name = "semi-destabilized-void", amount = 50 }
         },
-        results = { { type = "item", name = "promethium-void-culture", amount = 2, ignored_by_productivity = 2 } },
+        results = { { type = "item", name = "promethium-void-culture", amount = 2, ignored_by_productivity = 2, always_fresh = true } },
         allow_productivity = true,
         auto_recycle = true,
-        result_is_always_fresh = true,
         surface_condition = lib.globals.surface_conditions.gleba,
     }),
 
     {
         type = "recipe",
         name = "void-crystals",
-        category = "cryogenics",
+        categories = { "cryogenics" },
         icon = lib.icon("void-crystals"),
         subgroup = "void-core-crafting",
         order = "c",
@@ -71,7 +70,7 @@ data:extend({
     {
         type = "recipe",
         name = "void-core-chunk",
-        category = "chemistry",
+        categories = { "chemistry" },
         energy_required = 5,
         subgroup = "void-core-crafting",
         order = "d",
@@ -85,16 +84,16 @@ data:extend({
         },
         results = {
             { type = "item", name = "void-core-chunk",        amount_min = 1, amount_max = 2 },
-            { type = "item", name = "crystalization-plating", amount = 1,     probability = 0.5 },
-            { type = "item", name = "void-promethium",        amount = 1,     probability = 0.25 },
-            { type = "item", name = "unstable-void-matter",   amount = 1,     probability = 0.1 },
+            { type = "item", name = "crystalization-plating", amount = 1,     independent_probability = 0.5 },
+            { type = "item", name = "void-promethium",        amount = 1,     independent_probability = 0.25 },
+            { type = "item", name = "unstable-void-matter",   amount = 1,     independent_probability = 0.1 },
         },
         main_product = "void-core-chunk"
     },
     {
         type = "recipe",
         name = "void-core-base-heated",
-        category = "metallurgy",
+        categories = { "metallurgy" },
         energy_required = 10,
         surface_condition = lib.globals.surface_conditions.vulcanus,
         subgroup = "void-core-crafting",
@@ -114,7 +113,7 @@ data:extend({
     {
         type = "recipe",
         name = "void-core-base",
-        category = "cryogenics",
+        categories = { "cryogenics" },
         energy_required = 90,
         subgroup = "void-core-crafting",
         order = "f",
@@ -133,7 +132,7 @@ data:extend({
     {
         type = "recipe",
         name = "void-core-activation",
-        category = "electromagnetics",
+        categories = { "electromagnetics" },
         energy_required = 10,
         enabled = false,
         surface_condition = lib.globals.surface_conditions.fulgora,
@@ -145,8 +144,8 @@ data:extend({
             { type = "fluid", name = "semi-destabilized-void", amount = 25 }
         },
         results = {
-            { type = "item",  name = "void-core-pristine",     amount = 1,  probability = 0.8 },
-            { type = "item",  name = "void-core-base-cracked", amount = 1,  probability = 0.2 },
+            { type = "item",  name = "void-core-pristine",     amount = 1,  independent_probability = 0.8 },
+            { type = "item",  name = "void-core-base-cracked", amount = 1,  independent_probability = 0.2 },
             { type = "fluid", name = "electrolyte",            amount = 10, ignored_by_stats = 10, ignored_by_productivity = 10 },
         },
         main_product = "void-core-pristine"
