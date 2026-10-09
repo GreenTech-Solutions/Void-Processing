@@ -4,6 +4,7 @@
 #   2. luacheck with .luacheckrc
 #   3. emmylua_check with .emmyrc.json against the Factorio API library: catches fields and functions
 #      the game does not have, like defines.default_icon_size after 2.1
+#   4. changelog.txt against the format the game parses (tools/check-changelog.py)
 #   tools/check.sh
 set -uo pipefail
 
@@ -47,5 +48,7 @@ PY
 "$emmylua" . -c "$config" --warnings-as-errors > "$config.out" 2>&1 || status=1
 grep -v '^Check finished$' "$config.out"
 echo "emmylua_check (Factorio $factorio_api_version API): done"
+
+python3 "$here/check-changelog.py" "$repo/changelog.txt" || status=1
 
 exit "$status"
