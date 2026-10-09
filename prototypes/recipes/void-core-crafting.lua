@@ -8,7 +8,7 @@ data:extend({
         enabled = false,
         subgroup = "void-core-crafting",
         order = "a",
-        surface_condition = lib.globals.surface_conditions.space,
+        surface_conditions = lib.globals.surface_conditions.space,
         energy_required = 8,
         ingredients = {
             { type = "item", name = "promethium-asteroid-chunk", amount = 1 },
@@ -33,7 +33,7 @@ data:extend({
         results = { { type = "item", name = "promethium-void-culture", amount = 2, ignored_by_productivity = 2, always_fresh = true } },
         allow_productivity = true,
         auto_recycle = true,
-        surface_condition = lib.globals.surface_conditions.gleba,
+        surface_conditions = lib.globals.surface_conditions.gleba,
     }),
 
     {
@@ -74,7 +74,7 @@ data:extend({
         energy_required = 5,
         subgroup = "void-core-crafting",
         order = "d",
-        surface_condition = lib.globals.surface_conditions.nauvis,
+        surface_conditions = lib.globals.surface_conditions.nauvis,
         allow_productivity = true,
         enabled = false,
         ingredients = {
@@ -95,7 +95,7 @@ data:extend({
         name = "void-core-base-heated",
         categories = { "metallurgy" },
         energy_required = 10,
-        surface_condition = lib.globals.surface_conditions.vulcanus,
+        surface_conditions = lib.globals.surface_conditions.vulcanus,
         subgroup = "void-core-crafting",
         order = "e",
         enabled = false,
@@ -135,7 +135,7 @@ data:extend({
         categories = { "electromagnetics" },
         energy_required = 10,
         enabled = false,
-        surface_condition = lib.globals.surface_conditions.fulgora,
+        surface_conditions = lib.globals.surface_conditions.fulgora,
         subgroup = "void-core-crafting",
         order = "g",
         ingredients = {
