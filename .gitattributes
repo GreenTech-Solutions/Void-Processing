@@ -12,10 +12,7 @@ README.md export-ignore
 .github export-ignore
 .gitignore export-ignore
 .gitattributes export-ignore
-.releaserc export-ignore
-# release tooling and checks, not part of the mod
-package.json export-ignore
-pnpm-lock.yaml export-ignore
+# check settings and portal tooling, not part of the mod
 .luacheckrc export-ignore
 .emmyrc.json export-ignore
 tools export-ignore
