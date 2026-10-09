@@ -35,7 +35,7 @@ data:extend({
             },
 
         },
-        surface_condition = lib.globals.surface_conditions.space,
+        surface_conditions = lib.globals.surface_conditions.space,
         allow_productivity = false,
         enabled = false,
         ingredients = {

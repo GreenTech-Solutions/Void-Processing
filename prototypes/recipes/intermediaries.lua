@@ -28,7 +28,7 @@ data:extend({
             primary = { r = 0.54, g = 0.12, b = 0.80, a = 1.000 },   -- #ff7400ff
             secondary = { r = 0.54, g = 0.12, b = 0.80, a = 1.000 }, -- #ff3100ff
         },
-        surface_condition = lib.globals.surface_conditions.gleba,
+        surface_conditions = lib.globals.surface_conditions.gleba,
     },
 
     {
@@ -54,7 +54,7 @@ data:extend({
             primary = { r = 0.54, g = 0.12, b = 0.80, a = 1.000 },   -- #ff7400ff
             secondary = { r = 0.54, g = 0.12, b = 0.80, a = 1.000 }, -- #ff3100ff
         },
-        surface_condition = lib.globals.surface_conditions.gleba,
+        surface_conditions = lib.globals.surface_conditions.gleba,
     },
 
     {

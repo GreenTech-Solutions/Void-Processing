@@ -7,7 +7,7 @@ data:extend({
         type = "recipe",
         name = "void-promethium-cleaning",
         categories = { "centrifuging" },
-        surface_condition = lib.globals.surface_conditions.fulgora,
+        surface_conditions = lib.globals.surface_conditions.fulgora,
         energy_required = 5,
         icons = {
             {
@@ -55,7 +55,7 @@ data:extend({
         },
         allow_productivity = true,
         auto_recycle = true,
-        surface_condition = lib.globals.surface_conditions.gleba,
+        surface_conditions = lib.globals.surface_conditions.gleba,
     }),
 
     {
@@ -63,7 +63,7 @@ data:extend({
         name = "void-crystal-slurry-recycling",
         categories = { "centrifuging" },
         energy_required = 10,
-        surface_condition = lib.globals.surface_conditions.fulgora,
+        surface_conditions = lib.globals.surface_conditions.fulgora,
         icons = {
             {
                 icon = "__recycler__/graphics/icons/recycling.png"
@@ -111,7 +111,7 @@ data:extend({
         energy_required = 5,
         subgroup = "void-trash",
         order = "d",
-        surface_condition = lib.globals.surface_conditions.nauvis,
+        surface_conditions = lib.globals.surface_conditions.nauvis,
         allow_productivity = true,
         enabled = false,
         ingredients = {

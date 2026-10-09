@@ -6,7 +6,7 @@ data:extend({
         name = "gibberish-data",
         categories = { "void-crafting" },
         energy_required = 10,
-        surface_condition = lib.globals.surface_conditions.space,
+        surface_conditions = lib.globals.surface_conditions.space,
         allow_productivity = true,
         subgroup = "void-science",
         order = "a-a",
@@ -43,7 +43,7 @@ data:extend({
                 shift = { 4, 5 }
             },
         },
-        surface_condition = lib.globals.surface_conditions.space,
+        surface_conditions = lib.globals.surface_conditions.space,
         allow_productivity = true,
         enabled = false,
         ingredients = {
@@ -76,7 +76,7 @@ data:extend({
                 shift = { 4, 5 }
             },
         },
-        surface_condition = lib.globals.surface_conditions.space,
+        surface_conditions = lib.globals.surface_conditions.space,
         allow_productivity = true,
         enabled = false,
         ingredients = {
@@ -96,7 +96,7 @@ data:extend({
         categories = { "void-crafting" },
         energy_required = 30,
         icon = lib.icon("void-science-pack"),
-        surface_condition = lib.globals.surface_conditions.space,
+        surface_conditions = lib.globals.surface_conditions.space,
         allow_productivity = true,
         enabled = false,
         ingredients = {
