@@ -14,6 +14,7 @@
     "PlanetsLib >= 2.0.8",
     "! VoidProcessing"
   ],
+  "migrates_from": ["VoidProcessing"],
   "quality_required": false,
   "rail_bridges_required": false,
   "space_travel_required": true,
