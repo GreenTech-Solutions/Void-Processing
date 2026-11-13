@@ -12,3 +12,7 @@ if technology and technology.unit then
     end
     technology.unit.ingredients = sciences
 end
+
+require("prototypes.quality_sync")
+require("prototypes.quality_cap")
+require("prototypes.void_learning.generate")

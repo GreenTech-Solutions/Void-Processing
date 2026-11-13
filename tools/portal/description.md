@@ -1,5 +1,7 @@
 **A fork of [Void Processing](https://mods.factorio.com/mod/VoidProcessing) by RustyNova, updated for Factorio 2.1.** All credit for the mod goes to RustyNova. Prototype and setting names are unchanged, so a save with the original mod can switch to this one. Source: [GreenTech-Solutions/Void-Processing](https://github.com/GreenTech-Solutions/Void-Processing).
 
+Part 3 (quality) is done in this fork: void data disks, void synthesis and the Void quality tier above legendary; see the [README](https://github.com/GreenTech-Solutions/Void-Processing#part-3).
+
 # Void Processing
 
 A Space Age extension mod, right after promethium science. This adds a whole new tier of science, focused on matter/reality manipulation.

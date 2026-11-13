@@ -28,11 +28,54 @@ local function update_all_surfaces()
     end
 end
 
+local unlock_recipe_technologies = {
+    "void-data-learning",
+    "void-synthesis",
+    "void-disk-refining",
+    "void-quality",
+}
+
+local function update_void_learning_technology_effects(force)
+    -- Do not call force.reset_technology_effects(): Voidcraft enables its -qual recipes by script, and a reset would disable them.
+    for _, technology_name in ipairs(unlock_recipe_technologies) do
+        local force_technology = force.technologies[technology_name]
+        local technology_prototype = prototypes.technology[technology_name]
+        if force_technology and force_technology.researched and technology_prototype then
+            for _, effect in pairs(technology_prototype.effects or {}) do
+                if effect.type == "unlock-recipe" then
+                    local recipe = force.recipes[effect.recipe]
+                    if recipe then
+                        recipe.enabled = true
+                    end
+                end
+            end
+        end
+    end
+
+    local technology_name = "void-synthesis-productivity"
+    local force_technology = force.technologies[technology_name]
+    local technology_prototype = prototypes.technology[technology_name]
+    if force_technology and technology_prototype then
+        local levels = force_technology.researched and force_technology.level or force_technology.level - 1
+        for _, effect in pairs(technology_prototype.effects or {}) do
+            if effect.type == "change-recipe-productivity" then
+                local recipe = force.recipes[effect.recipe]
+                if recipe then
+                    recipe.productivity_bonus = math.max(recipe.productivity_bonus, effect.change * levels)
+                end
+            end
+        end
+    end
+end
+
 -- A save that had the original VoidProcessing (migrates_from in info.json) hands its storage over; that mod keeps
 -- nothing there, so it is dropped.
 local function on_mod_set_changed()
     migrated_storage.take({ "VoidProcessing" })
     update_all_surfaces()
+    for _, force in pairs(game.forces) do
+        update_void_learning_technology_effects(force)
+    end
 end
 
 script.on_init(on_mod_set_changed)

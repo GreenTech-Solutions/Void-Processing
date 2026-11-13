@@ -42,6 +42,61 @@ function utils.merge_arrays(old, new)
     return old
 end
 
+---Return the localized name of an item, with item/entity locale fallbacks
+---@param prototype data.ItemPrototype
+---@return data.LocalisedString
+function utils.item_localised_name(prototype)
+    return prototype.localised_name or {
+        "?",
+        { "item-name." .. prototype.name },
+        { "entity-name." .. prototype.name },
+        prototype.name,
+    }
+end
+
+---Return a copy of an item's icon layers with a resolved icon size
+---@param prototype data.ItemPrototype
+---@return data.IconData[]
+function utils.icons_of(prototype)
+    if prototype.icons then
+        -- In an icons array every layer has its own icon_size, 64 by default; prototype.icon_size is not used there.
+        local icons = table.deepcopy(prototype.icons)
+        for _, icon in pairs(icons) do
+            icon.icon_size = icon.icon_size or 64
+        end
+        return icons
+    end
+
+    return {
+        {
+            icon = prototype.icon or error("Item prototype has no icon"),
+            icon_size = prototype.icon_size or 64,
+        },
+    }
+end
+
+---Add icon layers in the upper-right corner of a base icon, at half its size
+---@param base_icons data.IconData[]
+---@param corner_icons data.IconData[]
+---@return data.IconData[]
+function utils.with_corner_icon(base_icons, corner_icons)
+    -- combine_icons gives a layer without scale the default one for its icon_size, then multiplies it by `scale`
+    return util.combine_icons(base_icons, corner_icons, { scale = 0.5, shift = { 8, -8 } }, 64)
+end
+
+---Add a 24px badge in the lower-right corner of a 64px icon
+---@param base_icons data.IconData[]
+---@param badge_icon string
+---@return data.IconData[]
+function utils.with_badge(base_icons, badge_icon)
+    return util.combine_icons(
+        base_icons,
+        { { icon = badge_icon, icon_size = 64 } },
+        { scale = 0.375, shift = { 10, 10 } },
+        64
+    )
+end
+
 ---Return the path to a specific icon in `mod_root/graphics/icons`
 ---
 ---To get icons in nested directories, add a `/`, ex: "fluid/water"

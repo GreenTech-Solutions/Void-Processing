@@ -15,7 +15,8 @@ data:extend({
         module_slots = 6,
         crafting_categories = {
             "void-crafting",
-            "void-crafting-or-fluid-crafting"
+            "void-crafting-or-fluid-crafting",
+            "void-synthesis",
         },
         crafting_speed = 2,
         corpse = "big-remnants",
