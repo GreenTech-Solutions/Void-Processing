@@ -18,6 +18,10 @@ data:extend({
         name = "black-hole-condensing",
     },
     {
+        type = "recipe-category",
+        name = "void-synthesis",
+    },
+    {
         type = "item-group",
         name = "void-processing",
         order = "f-a",
@@ -65,5 +69,23 @@ data:extend({
         name = "data-disks",
         group = "void-processing",
         order = "g"
+    },
+    {
+        type = "item-subgroup",
+        name = "void-learning",
+        group = "void-processing",
+        order = "h"
+    },
+    {
+        type = "item-subgroup",
+        name = "void-disk-refining",
+        group = "void-processing",
+        order = "i"
+    },
+    {
+        type = "item-subgroup",
+        name = "void-synthesis",
+        group = "void-processing",
+        order = "j"
     },
 })
