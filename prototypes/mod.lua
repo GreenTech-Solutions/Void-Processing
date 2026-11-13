@@ -1,4 +1,5 @@
 require("prototypes.categories")
+require("prototypes.quality")
 require("prototypes.entity")
 require("prototypes.fluid")
 require("prototypes.items.mod")

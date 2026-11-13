@@ -13,4 +13,5 @@ if technology and technology.unit then
     technology.unit.ingredients = sciences
 end
 
+require("prototypes.quality_sync")
 require("prototypes.void_learning.generate")
