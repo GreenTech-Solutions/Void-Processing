@@ -11,6 +11,18 @@ local min_technology_uses = 3
 -- Voidcraft. An item only one or two technologies take (a fish or a barrel that a lab accepting anything researches) is
 -- not a science pack either.
 
+-- Items another mod keeps out of recipes of other mods: it would hide the learning recipe and leave the disk unusable.
+local excluded_by_mod = {
+    -- imagination-final-fixes.lua hides every recipe outside its psychosis categories that takes an imaginary item
+    ["rabbasca-underground"] = {
+        "rabbasca-hellvent",
+        "rabbasca-contained-imagination",
+        "rabbasca-rampant-imagination",
+        "rabbasca-imaginary-science-pack",
+        "rabbasca-psychosis",
+    },
+}
+
 local function find_item_prototype(name)
     for type_name in pairs(defines.prototypes.item) do
         local item_type = data.raw[type_name]
@@ -112,6 +124,17 @@ return function()
     if scope == "science-and-modules" then
         for name in pairs(data.raw["module"] or {}) do
             candidates[name] = true
+        end
+    end
+
+    for mod_name, names in pairs(excluded_by_mod) do
+        if mods[mod_name] then
+            for _, name in pairs(names) do
+                if candidates[name] then
+                    candidates[name] = nil
+                    log("VoidProcessing-Updated: " .. name .. " is not learnable: " .. mod_name .. " keeps it out of other recipes")
+                end
+            end
         end
     end
 

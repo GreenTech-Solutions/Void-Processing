@@ -12,6 +12,7 @@
     "finely-crafted-graphics >= 2.1.0",
     "? visible-planets >= 1.8.0",
     "PlanetsLib >= 2.0.8",
+    "(?) xy-k2so-enhancements-nulls-fork",
     "! VoidProcessing"
   ],
   "migrates_from": [

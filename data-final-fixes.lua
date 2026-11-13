@@ -14,4 +14,5 @@ if technology and technology.unit then
 end
 
 require("prototypes.quality_sync")
+require("prototypes.quality_cap")
 require("prototypes.void_learning.generate")

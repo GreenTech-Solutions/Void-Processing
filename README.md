@@ -36,6 +36,8 @@ Added in this fork; details in the in-game recipe and technology descriptions.
 
 Learnable by default: science packs (lab inputs that at least 3 technologies use and at most 30 recipes take). Startup settings: "Learnable items", "Void quality". Other mods add items through `data.raw["mod-data"]["voidp-learnable-items"].data[<item>] = true` in `data-updates`.
 
+Void quality comes only from ascension: recipes of any mod that raise quality without their own limit, and items that spoil into a higher quality, stop at legendary.
+
 The Void quality icon is a recolour of the vanilla legendary icon.
 
 ## Credits
