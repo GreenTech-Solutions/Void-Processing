@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.0
+Date: 2026-11-13
+  Features:
+    - a save with the original VoidProcessing switches to this mod without leftover storage ([#6](https://github.com/GreenTech-Solutions/Void-Processing/issues/6))
+---------------------------------------------------------------------------------------------------
 Version: 2.1.2
 Date: 2026-10-09
   Bugfixes:

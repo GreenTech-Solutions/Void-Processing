@@ -1,6 +1,6 @@
 {
   "name": "VoidProcessing-Updated",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "title": "Void Processing (2.1)",
   "author": "RustyNova, updated by Alex Green",
   "homepage": "https://github.com/GreenTech-Solutions/Void-Processing",
@@ -14,7 +14,9 @@
     "PlanetsLib >= 2.0.8",
     "! VoidProcessing"
   ],
-  "migrates_from": ["VoidProcessing"],
+  "migrates_from": [
+    "VoidProcessing"
+  ],
   "quality_required": false,
   "rail_bridges_required": false,
   "space_travel_required": true,
