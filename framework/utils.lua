@@ -84,6 +84,19 @@ function utils.with_corner_icon(base_icons, corner_icons)
     return util.combine_icons(base_icons, corner_icons, { scale = 0.5, shift = { 8, -8 } }, 64)
 end
 
+---Add a 24px badge in the lower-right corner of a 64px icon
+---@param base_icons data.IconData[]
+---@param badge_icon string
+---@return data.IconData[]
+function utils.with_badge(base_icons, badge_icon)
+    return util.combine_icons(
+        base_icons,
+        { { icon = badge_icon, icon_size = 64 } },
+        { scale = 0.375, shift = { 10, 10 } },
+        64
+    )
+end
+
 ---Return the path to a specific icon in `mod_root/graphics/icons`
 ---
 ---To get icons in nested directories, add a `/`, ex: "fluid/water"
