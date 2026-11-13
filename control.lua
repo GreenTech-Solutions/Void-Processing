@@ -2,6 +2,8 @@
 -- There is no event for a recipe change, so the pylon is a separate entity that the script turns off and on:
 -- when a platform changes state, when a pylon is built, and once for every surface when the mod set changes.
 
+local migrated_storage = require("migrated_storage")
+
 local pylon_name = "void-pylon-tuned"
 local location_name = "black-hole"
 
@@ -26,8 +28,15 @@ local function update_all_surfaces()
     end
 end
 
-script.on_init(update_all_surfaces)
-script.on_configuration_changed(update_all_surfaces)
+-- A save that had the original VoidProcessing (migrates_from in info.json) hands its storage over; that mod keeps
+-- nothing there, so it is dropped.
+local function on_mod_set_changed()
+    migrated_storage.take({ "VoidProcessing" })
+    update_all_surfaces()
+end
+
+script.on_init(on_mod_set_changed)
+script.on_configuration_changed(on_mod_set_changed)
 
 script.on_event(defines.events.on_space_platform_changed_state, function(event)
     -- A platform has no surface right after it is created
