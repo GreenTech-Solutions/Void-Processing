@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.3.0
+Date: 2026-11-13
+  Features:
+    - learning, refining, ascension and synthesis recipes
+    - [locale] English and Russian text for part 3
+    - technologies for void data learning and synthesis
+    - void data disks for every learnable item
+    - Void quality and learning compatible with other mods
+    - Void quality tier above legendary
+---------------------------------------------------------------------------------------------------
 Version: 2.2.0
 Date: 2026-11-13
   Features:
